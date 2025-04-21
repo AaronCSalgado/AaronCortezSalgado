@@ -6,16 +6,47 @@
 //
 
 import SwiftUI
-
+import Combine
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView{
+            ZStack{
+                Rectangle()
+                    .frame(width: 400, height: 810)
+                    .foregroundStyle(Color.myrut)
+                    
+            VStack {
+                
+                Text("Debt Breaker")
+                    .font(. system(size: 60))
+                    .bold()
+                Spacer()
+                ZStack{
+                    Rectangle()
+                        .frame(width: 210, height: 60)
+                        .foregroundStyle(Color.myhel)
+                    Rectangle()
+                        .frame(width: 200, height: 50)
+                        .foregroundStyle(Color.mycol)
+                    NavigationLink{
+                        MainFloor()
+                    } label: {
+                        Text("Get to work")
+                    }
+                    .font(. system(size: 35))
+                    .colorMultiply(Color.myrut)
+                    .frame(width: 200, height: 50)
+                    .bold()
+                    
+                   
+                }
+            }
+            
+                
+            }
+            
         }
-        .padding()
+        
     }
 }
 

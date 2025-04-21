@@ -6,6 +6,17 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		93E34A8E2D9EBDD2001E7F7F /* Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34A8D2D9EBDD2001E7F7F /* Presets.swift */; };
+		93E34DF52DA95765001E7F7F /* FindFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34DF42DA95765001E7F7F /* FindFood.swift */; };
+		93E34DF72DAD3DBD001E7F7F /* FindFoodTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34DF62DAD3DBD001E7F7F /* FindFoodTwo.swift */; };
+		93E34E442DB008F5001E7F7F /* FindFoodThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E432DB008F5001E7F7F /* FindFoodThree.swift */; };
+		93E34E462DB00939001E7F7F /* FindFoodFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E452DB00939001E7F7F /* FindFoodFour.swift */; };
+		93E34E482DB009DF001E7F7F /* FindFoodFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E472DB009DF001E7F7F /* FindFoodFive.swift */; };
+		93E34E592DB164A0001E7F7F /* DebtCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E582DB164A0001E7F7F /* DebtCounter.swift */; };
+		93E34E5B2DB6710D001E7F7F /* rouletteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E5A2DB6710D001E7F7F /* rouletteTable.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		93E34A242D9C0D79001E7F7F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +38,32 @@
 		93E34A132D9C0D77001E7F7F /* AaronCortezSalgado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AaronCortezSalgado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E34A232D9C0D79001E7F7F /* AaronCortezSalgadoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AaronCortezSalgadoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E34A2D2D9C0D79001E7F7F /* AaronCortezSalgadoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AaronCortezSalgadoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E34A8D2D9EBDD2001E7F7F /* Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presets.swift; sourceTree = "<group>"; };
+		93E34DF42DA95765001E7F7F /* FindFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFood.swift; sourceTree = "<group>"; };
+		93E34DF62DAD3DBD001E7F7F /* FindFoodTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFoodTwo.swift; sourceTree = "<group>"; };
+		93E34E432DB008F5001E7F7F /* FindFoodThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFoodThree.swift; sourceTree = "<group>"; };
+		93E34E452DB00939001E7F7F /* FindFoodFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFoodFour.swift; sourceTree = "<group>"; };
+		93E34E472DB009DF001E7F7F /* FindFoodFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFoodFive.swift; sourceTree = "<group>"; };
+		93E34E582DB164A0001E7F7F /* DebtCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtCounter.swift; sourceTree = "<group>"; };
+		93E34E5A2DB6710D001E7F7F /* rouletteTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rouletteTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		93E34A902D9EC620001E7F7F /* Exceptions for "AaronCortezSalgado" folder in "AaronCortezSalgado" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 93E34A122D9C0D77001E7F7F /* AaronCortezSalgado */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		93E34A152D9C0D77001E7F7F /* AaronCortezSalgado */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				93E34A902D9EC620001E7F7F /* Exceptions for "AaronCortezSalgado" folder in "AaronCortezSalgado" target */,
+			);
 			path = AaronCortezSalgado;
 			sourceTree = "<group>";
 		};
@@ -75,6 +107,14 @@
 		93E34A0A2D9C0D77001E7F7F = {
 			isa = PBXGroup;
 			children = (
+				93E34E582DB164A0001E7F7F /* DebtCounter.swift */,
+				93E34E5A2DB6710D001E7F7F /* rouletteTable.swift */,
+				93E34DF42DA95765001E7F7F /* FindFood.swift */,
+				93E34DF62DAD3DBD001E7F7F /* FindFoodTwo.swift */,
+				93E34E432DB008F5001E7F7F /* FindFoodThree.swift */,
+				93E34E472DB009DF001E7F7F /* FindFoodFive.swift */,
+				93E34E452DB00939001E7F7F /* FindFoodFour.swift */,
+				93E34A8D2D9EBDD2001E7F7F /* Presets.swift */,
 				93E34A152D9C0D77001E7F7F /* AaronCortezSalgado */,
 				93E34A262D9C0D79001E7F7F /* AaronCortezSalgadoTests */,
 				93E34A302D9C0D79001E7F7F /* AaronCortezSalgadoUITests */,
@@ -236,6 +276,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E34E5B2DB6710D001E7F7F /* rouletteTable.swift in Sources */,
+				93E34E482DB009DF001E7F7F /* FindFoodFive.swift in Sources */,
+				93E34DF52DA95765001E7F7F /* FindFood.swift in Sources */,
+				93E34E592DB164A0001E7F7F /* DebtCounter.swift in Sources */,
+				93E34E462DB00939001E7F7F /* FindFoodFour.swift in Sources */,
+				93E34E442DB008F5001E7F7F /* FindFoodThree.swift in Sources */,
+				93E34A8E2D9EBDD2001E7F7F /* Presets.swift in Sources */,
+				93E34DF72DAD3DBD001E7F7F /* FindFoodTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +446,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AaronCortezSalgado/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AaronCortezSalgado/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,6 +475,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AaronCortezSalgado/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AaronCortezSalgado/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
