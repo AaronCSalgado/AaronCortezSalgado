@@ -15,6 +15,8 @@
 		93E34E482DB009DF001E7F7F /* FindFoodFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E472DB009DF001E7F7F /* FindFoodFive.swift */; };
 		93E34E592DB164A0001E7F7F /* DebtCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E582DB164A0001E7F7F /* DebtCounter.swift */; };
 		93E34E5B2DB6710D001E7F7F /* rouletteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34E5A2DB6710D001E7F7F /* rouletteTable.swift */; };
+		93E34F012DB7E795001E7F7F /* Slots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E34F002DB7E795001E7F7F /* Slots.swift */; };
+		93E350FC2DC8FEA5001E7F7F /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E350FB2DC8FEA5001E7F7F /* StatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		93E34E472DB009DF001E7F7F /* FindFoodFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFoodFive.swift; sourceTree = "<group>"; };
 		93E34E582DB164A0001E7F7F /* DebtCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtCounter.swift; sourceTree = "<group>"; };
 		93E34E5A2DB6710D001E7F7F /* rouletteTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rouletteTable.swift; sourceTree = "<group>"; };
+		93E34F002DB7E795001E7F7F /* Slots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slots.swift; sourceTree = "<group>"; };
+		93E350FB2DC8FEA5001E7F7F /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -107,6 +111,8 @@
 		93E34A0A2D9C0D77001E7F7F = {
 			isa = PBXGroup;
 			children = (
+				93E350FB2DC8FEA5001E7F7F /* StatView.swift */,
+				93E34F002DB7E795001E7F7F /* Slots.swift */,
 				93E34E582DB164A0001E7F7F /* DebtCounter.swift */,
 				93E34E5A2DB6710D001E7F7F /* rouletteTable.swift */,
 				93E34DF42DA95765001E7F7F /* FindFood.swift */,
@@ -276,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93E350FC2DC8FEA5001E7F7F /* StatView.swift in Sources */,
+				93E34F012DB7E795001E7F7F /* Slots.swift in Sources */,
 				93E34E5B2DB6710D001E7F7F /* rouletteTable.swift in Sources */,
 				93E34E482DB009DF001E7F7F /* FindFoodFive.swift in Sources */,
 				93E34DF52DA95765001E7F7F /* FindFood.swift in Sources */,

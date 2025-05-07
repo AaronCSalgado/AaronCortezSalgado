@@ -26,4 +26,12 @@
  remodeled the whole kitchen
  4/17/25
  kitchen has been mostly completed with a few bugs and with no art
+ 4/21/25
+ with the kitchen done (exluding the art) I've began to work on the casino's games such as the roulette table
+ 4/22/25
+ the roulette table will be even harder then the kitchen
+ 4/23/25
+ A brick size of code been add to roulette, I am both tried and happy
+ 5/2/25
+ Routette table can give player debt now, I finally got most of the Routette table under control, BUT the app is starting to act slow because of how much is going on. Fixing still on going
  */

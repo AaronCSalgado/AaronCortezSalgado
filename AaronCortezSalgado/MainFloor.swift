@@ -13,43 +13,34 @@ struct MainFloor: View {
     @State var SecondElapsed = 0
     @State var SecondsUntil = 60
     @State var debt = 10000000000.0
+    @State var show = true
+    @State var show2 = false
     var body: some View {
-        NavigationView{
-            VStack{
+            HStack{
                 Text("\(SecondElapsed)")
-               
                 NavigationLink{
                     Kitchen()
                 }label: {
                     Text("kitchen")
                 }
                 NavigationLink{
-                    
+                    SecondFloor()
                 }label: {
                     Text("second Floor")
                 }
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            }
+                NavigationLink{
+                    StatView()
+                }label: {
+                    Text("Your Piggy Bank")
+                }
         }
         .onAppear(){
             self.instant()
-            
         }.onDisappear(){
-            
-            
         }.onReceive(timer) { _ in
             self.SecondElapsed += 1
             isTimerDone()
         }
-        
     }
     func instant(){
         self.timer = Timer.publish(every: 1, on: .main, in: .common)

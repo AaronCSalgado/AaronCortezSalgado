@@ -34,7 +34,7 @@ struct Kitchen: View {
     @State var paid = 0.0
 //    @State var Ch1ps = 0.0
     var body: some View {
-        NavigationView{
+//        NavigationView{
             ZStack{
                 if show2 {
                     FindFood()
@@ -44,7 +44,6 @@ struct Kitchen: View {
                             serve += 1
                         }
                 }
-                
                 if show4 {
                     FindFoodTwo()
                         .onTapGesture {
@@ -110,52 +109,15 @@ struct Kitchen: View {
                     
                     
                     HStack{
-//                        Button{
-//                            serve += 1
-//                        }label: {
-//                            Text("\(food[0])")
-//                        }
-//                        Button{
-//                            serve += 1
-//                        }label: {
-//                            Text("\(food[1])")
-//                        }
-//                        Button{
-//                            serve += 1
-//                        }label: {
-//                            Text("\(food[2])")
-//                        }
-//                        Button{
-//                            serve += 1
-//                        }label: {
-//                            Text("\(food[3])")
-//                        }
-                    }
-                    HStack{
-//                        Button{
-//                            serve += 1
-//                            
-//                        }label: {
-//                            Text("\(Drinks[0])")
-//                            
-//                        }
                         if serve == 5 {
                             if close == true {
                                 Button{
                                     open = true
                                     close = false
                                     severed()
-//                                    show.toggle()
-//                                    show2.toggle()
+//                                   
                                     print(serve)
-//                                    show3.toggle()
-//                                    show4.toggle()
-//                                    show5.toggle()
-//                                    show6.toggle()
-//                                    show7.toggle()
-//                                    show8.toggle()
-//                                    show9.toggle()
-//                                    show10.toggle()
+//
                                 }label: {
                                     Text("Send")
                                         .font(. system(size: 20))
@@ -174,7 +136,7 @@ struct Kitchen: View {
                     
                 }
             }
-        }
+//        }
         
         
         

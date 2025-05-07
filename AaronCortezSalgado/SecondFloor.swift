@@ -9,7 +9,19 @@ import SwiftUI
 import Combine
 struct SecondFloor: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        NavigationView{
+            ZStack{
+                VStack{
+                    HStack{
+                        NavigationLink{
+                            rouletteTable( Numberinput: "0")
+                        }label: {
+                            Text("Roulette Table")
+                        }
+                    }
+                }
+//            }
+        }
     }
 }
 

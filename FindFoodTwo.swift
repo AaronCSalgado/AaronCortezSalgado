@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//testing push
 struct FindFoodTwo: View {
     @State var immage =  ["fries","salad","steak","burger","fried chicken","onion rings","shrimps"]
     @State var xPos = 0.0
