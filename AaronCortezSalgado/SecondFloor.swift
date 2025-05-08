@@ -19,6 +19,13 @@ struct SecondFloor: View {
                             Text("Roulette Table")
                         }
                     }
+                    HStack{
+                        NavigationLink{
+                            Slots( Numberinput: "0")
+                        }label: {
+                            Text("Slots")
+                        }
+                    }
                 }
 //            }
         }

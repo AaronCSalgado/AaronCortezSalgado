@@ -16,8 +16,8 @@ struct MainFloor: View {
     @State var show = true
     @State var show2 = false
     var body: some View {
-            HStack{
-                Text("\(SecondElapsed)")
+            VStack{
+//                Text("\(SecondElapsed)")
                 NavigationLink{
                     Kitchen()
                 }label: {
@@ -29,7 +29,7 @@ struct MainFloor: View {
                     Text("second Floor")
                 }
                 NavigationLink{
-                    StatView()
+                    StatView(Numberinput: "0")
                 }label: {
                     Text("Your Piggy Bank")
                 }

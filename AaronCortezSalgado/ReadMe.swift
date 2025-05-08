@@ -34,4 +34,8 @@
  A brick size of code been add to roulette, I am both tried and happy
  5/2/25
  Routette table can give player debt now, I finally got most of the Routette table under control, BUT the app is starting to act slow because of how much is going on. Fixing still on going
+ 5/8/25
+ Small problem with the Routette table's button
+ Finished Slots
+ art is still need but I don't think I'll have time to color it sadly
  */

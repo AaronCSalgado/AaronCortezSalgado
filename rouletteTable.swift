@@ -28,14 +28,15 @@ struct rouletteTable: View {
     @State var bet6 = 0.0
     @State var people = Int.random(in: 0...5)
     @State var Numberinput: String
-    @State var Number = 0
+    @State var Number = 0.0
     var body: some View {
         VStack{
+            
             TextField("bet money here", text: $Numberinput)
 //            TextField()
             Button{
-                Number = Int(Numberinput)!
-                bet -= bet
+                Number = Double(Numberinput)!
+                
                 WinRoulette()
                 
             }label: {
@@ -63,6 +64,7 @@ struct rouletteTable: View {
                         print(oddsNevens)
                         playerBet()
                     }
+                    
             }
             HStack{
                 Button{
@@ -102,10 +104,14 @@ struct rouletteTable: View {
             bet4 = Double.random(in: 730...9100)
             bet5 = Double.random(in: 580...6700)
             bet6 = Double.random(in: 620...7500)
+            compblack = black.randomElement()!
+            compRed = red.randomElement()!
+            compblack2 = black.randomElement()!
+            compRed2 = red.randomElement()!
         }
     }
     func WinRoulette(){
-        if compblack == playerblackpicker && compRed2 != playerRedpicker {
+        if compblack == playerblackpicker && compRed2 == playerRedpicker {
             Ch1ps += bet2*0.5
             Ch1ps += bet3*0.5
             Ch1ps += bet4*0.5
@@ -120,7 +126,7 @@ struct rouletteTable: View {
             debt += bet6*0.10
             print("DEBT")
         }
-        if compRed == playerRedpicker && compRed2 != playerRedpicker {
+        if compRed == playerRedpicker && compRed2 == playerRedpicker {
             Ch1ps += bet2*0.5
             Ch1ps += bet3*0.5
             Ch1ps += bet4*0.5
@@ -150,6 +156,10 @@ struct rouletteTable: View {
             debt += bet6*0.10
             print("DEBT")
         }
+        compblack = black.randomElement()!
+        compRed = red.randomElement()!
+        compblack2 = black.randomElement()!
+        compRed2 = red.randomElement()!
     }
     func WinRoulette2(){
         for i in odds{

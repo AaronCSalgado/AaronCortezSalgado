@@ -8,26 +8,52 @@
 import SwiftUI
 
 struct StatView: View {
+    @State var show = false
+    @State var Numberinput: String
+    @State var Number = 0.0
     var body: some View {
         VStack{
-            Text("\(debt)")
-                .font(. system(size: 50))
-                .bold()
-            
-                .padding()
-                .padding()
-                .padding()
-                .padding()
-            
-            Text("\(Ch1ps)")
-                .font(. system(size: 50))
-                .bold()
-                .padding()
-                .padding()
+            if show == true{
+                Text("Freedom")
+                    .font(.system(size: 30))
+                    .bold()
+            }
+            if show == false{
+                HStack{
+                    Text("Debt \(debt)")
+                        .font(. system(size: 20))
+                        .bold()
+                        .padding()
+                        .padding()
+                        .padding()
+                        .padding()
+                    Text("Money \(Ch1ps)")
+                        .font(. system(size: 20))
+                        .bold()
+                        .padding()
+                        .padding()
+                }
+            }
+            HStack{
+                TextField("bet money here", text: $Numberinput)
+                Button{
+                    Number = Double(Numberinput)!
+                    Ch1ps -= Number
+                    debt -= Number
+                }label: {
+                    Text("Tranfer")
+                }
+                
+            }
+        }
+    }
+    func Debt_Broken(){
+        if debt <= 0{
+            show = true
         }
     }
 }
 
 #Preview {
-    StatView()
+    StatView(Numberinput: "0")
 }
