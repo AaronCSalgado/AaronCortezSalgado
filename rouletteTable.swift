@@ -8,6 +8,8 @@
 import SwiftUI
 import Combine
 struct rouletteTable: View {
+    @State var show = false
+    @State var show2 = false
     @State var oddsNevens = Int.random(in: 1...36)
     @State var spinNumber: Int = 0
     @State var black = [2,4,6,8,12,14,16,18,20,22,24,26,28,29,32,34,36]
@@ -31,29 +33,35 @@ struct rouletteTable: View {
     @State var Number = 0.0
     var body: some View {
         VStack{
-            
-            TextField("bet money here", text: $Numberinput)
-//            TextField()
-            Button{
-                Number = Double(Numberinput)!
-                
-                WinRoulette()
-                
-            }label: {
-                Text( "bet")
+           
+            HStack{
+                Button{
+                    
+                    Number = Double(Numberinput)!
+                    WinRoulette()
+                    show = true
+                }label: {
+                    Text( "bet")
+                }
+                .font(.system(size: 30))
+                .bold()
+                TextField("bet money here", text: $Numberinput)
+                    .font(.system(size: 20))
+                    .bold()
             }
-//            TextField("Betting amount", in: bet)
                 HStack{
                     Picker("point row out",selection: $playerRedpicker){
                         ForEach(red, id: \.self){
                             Text("\($0)")
                         }
                     }
+                    
                     Picker("point collom out",selection: $playerblackpicker){
                         ForEach(black, id: \.self){
                             Text("\($0)")
                         }
                     }
+                    
                     .onAppear(){
                         compblack = black.randomElement()!
                         compRed = red.randomElement()!
@@ -68,20 +76,31 @@ struct rouletteTable: View {
             }
             HStack{
                 Button{
+                    Number = Double(Numberinput)!
                     WinRoulette2()
+                    show2 = true
                 }label: {
                     Text( "evens")
                 }
+                .font(.system(size: 30))
+                .bold()
                 Button{
+                    Number = Double(Numberinput)!
                     WinRoulette2()
                     print(oddsNevens)
+                    show2 = true
                 }label: {
                     Text( "odds")
                 }
+                .font(.system(size: 30))
+                .bold()
             }
         }
     }
     func playerBet(){
+        
+            
+        
         if people >= 0 {
 //            Text("they're afraid of you")
         } else if people == 1 {
@@ -104,66 +123,48 @@ struct rouletteTable: View {
             bet4 = Double.random(in: 730...9100)
             bet5 = Double.random(in: 580...6700)
             bet6 = Double.random(in: 620...7500)
+        }
             compblack = black.randomElement()!
             compRed = red.randomElement()!
             compblack2 = black.randomElement()!
             compRed2 = red.randomElement()!
-        }
+        
     }
     func WinRoulette(){
-        if compblack == playerblackpicker && compRed2 == playerRedpicker {
-            Ch1ps += bet2*0.5
-            Ch1ps += bet3*0.5
-            Ch1ps += bet4*0.5
-            Ch1ps += bet5*0.5
-            Ch1ps += bet6*0.5
-            print("winner")
-        } else {
-            debt += bet2*0.10
-            debt += bet3*0.10
-            debt += bet4*0.10
-            debt += bet5*0.10
-            debt += bet6*0.10
-            print("DEBT")
-        }
-        if compRed == playerRedpicker && compRed2 == playerRedpicker {
-            Ch1ps += bet2*0.5
-            Ch1ps += bet3*0.5
-            Ch1ps += bet4*0.5
-            Ch1ps += bet5*0.5
-            Ch1ps += bet6*0.5
-            print("winner")
-        }else {
-            debt += bet2*0.10
-            debt += bet3*0.10
-            debt += bet4*0.10
-            debt += bet5*0.10
-            debt += bet6*0.10
-            print("DEBT")
-        }
-        if compblack2 == playerblackpicker && compRed2 == playerRedpicker {
-            Ch1ps += bet2
-            Ch1ps += bet3
-            Ch1ps += bet4
-            Ch1ps += bet5
-            Ch1ps += bet6
-            print("winner")
-        }else {
-            debt += bet2*0.10
-            debt += bet3*0.10
-            debt += bet4*0.10
-            debt += bet5*0.10
-            debt += bet6*0.10
-            print("DEBT")
-        }
-        compblack = black.randomElement()!
-        compRed = red.randomElement()!
-        compblack2 = black.randomElement()!
-        compRed2 = red.randomElement()!
-    }
-    func WinRoulette2(){
-        for i in odds{
-            if oddsNevens == odds[Int(i)]{
+        if show == true {
+            
+            
+            if compblack == playerblackpicker && compRed2 == playerRedpicker {
+                Ch1ps += bet2*0.5
+                Ch1ps += bet3*0.5
+                Ch1ps += bet4*0.5
+                Ch1ps += bet5*0.5
+                Ch1ps += bet6*0.5
+                print("winner")
+            } else {
+                debt += bet2*0.10
+                debt += bet3*0.10
+                debt += bet4*0.10
+                debt += bet5*0.10
+                debt += bet6*0.10
+                print("DEBT")
+            }
+            if compRed == playerRedpicker && compRed2 == playerRedpicker {
+                Ch1ps += bet2*0.5
+                Ch1ps += bet3*0.5
+                Ch1ps += bet4*0.5
+                Ch1ps += bet5*0.5
+                Ch1ps += bet6*0.5
+                print("winner")
+            }else {
+                debt += bet2*0.10
+                debt += bet3*0.10
+                debt += bet4*0.10
+                debt += bet5*0.10
+                debt += bet6*0.10
+                print("DEBT")
+            }
+            if compblack2 == playerblackpicker && compRed2 == playerRedpicker {
                 Ch1ps += bet2
                 Ch1ps += bet3
                 Ch1ps += bet4
@@ -179,21 +180,48 @@ struct rouletteTable: View {
                 print("DEBT")
             }
         }
-        for i in evens{
-            if oddsNevens == odds[Int(i)]{
-                Ch1ps += bet2
-                Ch1ps += bet3
-                Ch1ps += bet4
-                Ch1ps += bet5
-                Ch1ps += bet6
-                print("winner")
-            }else {
-                debt += bet2*0.10
-                debt += bet3*0.10
-                debt += bet4*0.10
-                debt += bet5*0.10
-                debt += bet6*0.10
-                print("DEBT")
+        compblack = black.randomElement()!
+        compRed = red.randomElement()!
+        compblack2 = black.randomElement()!
+        compRed2 = red.randomElement()!
+    }
+    func WinRoulette2(){
+        if show2 == true{
+            
+            
+            for i in odds{
+                if oddsNevens == odds[Int(i)]{
+                    Ch1ps += bet2
+                    Ch1ps += bet3
+                    Ch1ps += bet4
+                    Ch1ps += bet5
+                    Ch1ps += bet6
+                    print("winner")
+                }else {
+                    debt += bet2*0.10
+                    debt += bet3*0.10
+                    debt += bet4*0.10
+                    debt += bet5*0.10
+                    debt += bet6*0.10
+                    print("DEBT")
+                }
+            }
+            for i in evens{
+                if oddsNevens == odds[Int(i)]{
+                    Ch1ps += bet2
+                    Ch1ps += bet3
+                    Ch1ps += bet4
+                    Ch1ps += bet5
+                    Ch1ps += bet6
+                    print("winner")
+                }else {
+                    debt += bet2*0.10
+                    debt += bet3*0.10
+                    debt += bet4*0.10
+                    debt += bet5*0.10
+                    debt += bet6*0.10
+                    print("DEBT")
+                }
             }
         }
     }

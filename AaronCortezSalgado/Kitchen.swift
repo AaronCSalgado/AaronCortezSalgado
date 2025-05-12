@@ -86,7 +86,6 @@ struct Kitchen: View {
                         Button{
                             open = false
                             close = true
-                            //                        let order = Int.random(in: 0...4)
                             print("\(serve)")
                             cook()
                             show.toggle()
@@ -106,8 +105,6 @@ struct Kitchen: View {
                                 .bold()
                         }
                     }
-                    
-                    
                     HStack{
                         if serve == 5 {
                             if close == true {
@@ -131,18 +128,10 @@ struct Kitchen: View {
                     
                   
                     .onAppear() {
-                        //                    .randonPlace()
+             
                     }
-                    
                 }
             }
-//        }
-        
-        
-        
-        
-        
-        
     }
     func cook() {
 //        food.shuffle()

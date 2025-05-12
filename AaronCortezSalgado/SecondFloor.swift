@@ -11,6 +11,9 @@ struct SecondFloor: View {
     var body: some View {
 //        NavigationView{
             ZStack{
+                Image("SECON")
+                    .resizable()
+                    .background(Color.black)
                 VStack{
                     HStack{
                         NavigationLink{

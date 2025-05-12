@@ -12,12 +12,17 @@ struct MainFloor: View {
     @State var connectedtimer: Cancellable? = nil
     @State var SecondElapsed = 0
     @State var SecondsUntil = 60
-    @State var debt = 10000000000.0
+   
     @State var show = true
     @State var show2 = false
     var body: some View {
+        ZStack{
+            
+            Image("MAIN")
+                .resizable()
+                .background(Color.black)
             VStack{
-//                Text("\(SecondElapsed)")
+                //                Text("\(SecondElapsed)")
                 NavigationLink{
                     Kitchen()
                 }label: {
@@ -33,6 +38,7 @@ struct MainFloor: View {
                 }label: {
                     Text("Your Piggy Bank")
                 }
+            }
         }
         .onAppear(){
             self.instant()

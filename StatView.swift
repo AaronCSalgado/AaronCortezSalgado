@@ -35,7 +35,7 @@ struct StatView: View {
                 }
             }
             HStack{
-                TextField("bet money here", text: $Numberinput)
+                
                 Button{
                     Number = Double(Numberinput)!
                     Ch1ps -= Number
@@ -43,7 +43,7 @@ struct StatView: View {
                 }label: {
                     Text("Tranfer")
                 }
-                
+                TextField("bet money here", text: $Numberinput)
             }
         }
     }

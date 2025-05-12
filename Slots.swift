@@ -21,19 +21,33 @@ struct Slots: View {
     @State var randomizeslot3 = 0
     var body: some View {
         VStack{
-            Text("\(randomizeslot1),\(randomizeslot2),\(randomizeslot3)")
-            TextField("bet money here", text: $Numberinput)
-            Button{
-                Number = Double(Numberinput)!
-                Maybe()
-                randomizeslot1 = Int.random(in: 1...3)
-                randomizeslot2 = Int.random(in: 1...3)
-                randomizeslot3 = Int.random(in: 1...3)
-            }label: {
-                Text("Lever")
+            HStack{
+                Text("\(randomizeslot1)")
+                    .font(.system(size: 30))
+                    .bold()
+                Text("\(randomizeslot2)")
+                    .font(.system(size: 30))
+                    .bold()
+                Text("\(randomizeslot3)")
+                    .font(.system(size: 30))
+                    .bold()
             }
-            
-            
+            HStack{
+                Button{
+                    Number = Double(Numberinput)!
+                    Maybe()
+                    randomizeslot1 = Int.random(in: 1...3)
+                    randomizeslot2 = Int.random(in: 1...3)
+                    randomizeslot3 = Int.random(in: 1...3)
+                }label: {
+                    Text("Lever")
+                }
+                .font(.system(size: 30))
+                .bold()
+                TextField("bet money here", text: $Numberinput)
+                    .font(.system(size: 30))
+                    .bold()
+            }
             
         }
         

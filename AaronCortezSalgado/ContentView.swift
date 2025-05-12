@@ -14,7 +14,7 @@ struct ContentView: View {
                 Rectangle()
                     .frame(width: 400, height: 810)
                     .foregroundStyle(Color.myrut)
-                    
+                    .background(Color.black)
             VStack {
                 
                 Text("Debt Breaker")
@@ -37,11 +37,8 @@ struct ContentView: View {
                     .colorMultiply(Color.myrut)
                     .frame(width: 200, height: 50)
                     .bold()
-                    
-                   
                 }
             }
-            
                 
             }
             
