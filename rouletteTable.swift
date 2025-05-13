@@ -36,7 +36,7 @@ struct rouletteTable: View {
            
             HStack{
                 Button{
-                    
+                    Ch1ps -= Number
                     Number = Double(Numberinput)!
                     WinRoulette()
                     show = true
@@ -94,6 +94,10 @@ struct rouletteTable: View {
                 }
                 .font(.system(size: 30))
                 .bold()
+            }
+            .padding()
+            VStack{
+                Text("The STAFF will spin the wheel when you are done picking a bet, please pick one or more")
             }
         }
     }
@@ -189,8 +193,8 @@ struct rouletteTable: View {
         if show2 == true{
             
             
-            for i in odds{
-                if oddsNevens == odds[Int(i)]{
+            for i in 0..<odds.count{
+                if oddsNevens == odds[i]{
                     Ch1ps += bet2
                     Ch1ps += bet3
                     Ch1ps += bet4
@@ -206,8 +210,8 @@ struct rouletteTable: View {
                     print("DEBT")
                 }
             }
-            for i in evens{
-                if oddsNevens == odds[Int(i)]{
+            for i in 0..<evens.count{
+                if oddsNevens == odds[i]{
                     Ch1ps += bet2
                     Ch1ps += bet3
                     Ch1ps += bet4

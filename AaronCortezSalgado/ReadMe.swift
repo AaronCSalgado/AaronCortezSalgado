@@ -38,4 +38,8 @@
  Small problem with the Routette table's button
  Finished Slots
  art is still need but I don't think I'll have time to color it sadly
+ 5/12/25
+ two arts
+ 5/13/25
+ few changes
  */

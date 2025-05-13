@@ -48,7 +48,7 @@ struct Slots: View {
                     .font(.system(size: 30))
                     .bold()
             }
-            
+            Text("may luck look down on you")
         }
         
         

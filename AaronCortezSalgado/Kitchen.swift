@@ -36,6 +36,58 @@ struct Kitchen: View {
     var body: some View {
 //        NavigationView{
             ZStack{
+                VStack{
+                    Text("\(Ch1ps)")
+                        .font(. system(size: 40))
+                    Text("Find the food")
+                        .font(. system(size: 20))
+                }
+                .padding(.bottom, 20)
+                VStack{
+                   
+                    if open == true {
+                        Button{
+                            open = false
+                            close = true
+                            print("\(serve)")
+                            cook()
+                            show.toggle()
+                            show2.toggle()
+                            show3.toggle()
+                            show4.toggle()
+                            show5.toggle()
+                            show6.toggle()
+                            show7.toggle()
+                            show8.toggle()
+                            show9.toggle()
+                            show10.toggle()
+                            
+                        } label: {
+                            Text("\(table)")
+                                .font(. system(size: 20))
+                                .bold()
+                        }
+                    }
+                    HStack{
+                        if serve == 5 {
+                            if close == true {
+                                Button{
+                                    open = true
+                                    close = false
+                                    severed()
+                                    print(serve)
+                                }label: {
+                                    Text("Send")
+                                        .font(. system(size: 20))
+                                        .bold()
+                                }
+                            }
+                        }
+                    }
+                    .onAppear() {
+                    }
+                }
+                
                 if show2 {
                     FindFood()
                         .onTapGesture {
@@ -77,60 +129,7 @@ struct Kitchen: View {
                         }
                 }
                  
-                VStack{
-                    Text("\(Ch1ps)")
-                        .font(. system(size: 40))
-                    Text("Find the food")
-                        .font(. system(size: 20))
-                    if open == true {
-                        Button{
-                            open = false
-                            close = true
-                            print("\(serve)")
-                            cook()
-                            show.toggle()
-                            show2.toggle()
-                            show3.toggle()
-                            show4.toggle()
-                            show5.toggle()
-                            show6.toggle()
-                            show7.toggle()
-                            show8.toggle()
-                            show9.toggle()
-                            show10.toggle()
-                            
-                        } label: {
-                            Text("\(table)")
-                                .font(. system(size: 20))
-                                .bold()
-                        }
-                    }
-                    HStack{
-                        if serve == 5 {
-                            if close == true {
-                                Button{
-                                    open = true
-                                    close = false
-                                    severed()
-//                                   
-                                    print(serve)
-//
-                                }label: {
-                                    Text("Send")
-                                        .font(. system(size: 20))
-                                        .bold()
-                                    
-                                    
-                                }
-                            }
-                        }
-                    }
-                    
-                  
-                    .onAppear() {
-             
-                    }
-                }
+                
             }
     }
     func cook() {

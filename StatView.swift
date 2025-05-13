@@ -37,9 +37,7 @@ struct StatView: View {
             HStack{
                 
                 Button{
-                    Number = Double(Numberinput)!
-                    Ch1ps -= Number
-                    debt -= Number
+                    moveOn()
                 }label: {
                     Text("Tranfer")
                 }
@@ -51,6 +49,11 @@ struct StatView: View {
         if debt <= 0{
             show = true
         }
+    }
+    func moveOn(){
+        Number = Double(Numberinput)!
+        Ch1ps -= Number
+        debt -= Number
     }
 }
 
