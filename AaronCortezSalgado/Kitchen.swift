@@ -38,6 +38,8 @@ struct Kitchen: View {
             ZStack{
                 VStack{
                     Text("\(Ch1ps)")
+                        .foregroundStyle(Color.mint)
+                        .bold()
                         .font(. system(size: 40))
                     Text("Find the food")
                         .font(. system(size: 20))
@@ -128,29 +130,24 @@ struct Kitchen: View {
                             serve += 1
                         }
                 }
-                 
-                
             }
     }
     func cook() {
-//        food.shuffle()
-//        Drinks.shuffle()
-//        print("\(food[0]),","\(food[1]),","\(food[2]),","\(food[3]),","\(Drinks[0]),")
-//        if food[0] = food["fries"]
-//        serve += 6
-        
+  let goh = Int.random(in: 1...100)
+        if goh <= 80 {
+            paid *= 15
+        }
     }
     func severed(){
-//        var HM = Int.random(in: 1...4)
         print(serve)
         if serve == 5 {
-            paid += Double.random(in: 15.0...20.0)
+            paid += Double.random(in: 20.0...40.0)
             let serveFavor = Int.random(in: 1...10)
             let TipAmout = Double.random(in: 0.1...0.25)
             if serveFavor <= 7 {
+                cook()
                 paid += paid*TipAmout
             }
-            
             serve -= 5
             Ch1ps += paid
             paid -= paid
@@ -165,7 +162,6 @@ struct Kitchen: View {
         yPos = Double.random(in: 50...750)
     }
 }
-
 #Preview {
     Kitchen()
 }

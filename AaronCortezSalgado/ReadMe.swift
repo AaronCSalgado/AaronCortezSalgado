@@ -42,4 +42,6 @@
  two arts
  5/13/25
  few changes
+ 5/22/25
+ after a while of adding and fix, new info buttons, better money gain, better rules
  */

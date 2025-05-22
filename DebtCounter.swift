@@ -7,7 +7,7 @@
 import Combine
 import Foundation
 import SwiftUI
-var debt = 100000000.0
+var debt = 1000000.0
 var Ch1ps = 0.0
 var betting = 0.0
 // var timer: Timer.TimerPublisher = Timer.publish(every: 1, on: .main, in: .common)

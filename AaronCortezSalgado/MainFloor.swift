@@ -17,10 +17,17 @@ struct MainFloor: View {
     @State var show2 = false
     var body: some View {
         ZStack{
-            
-            Image("MAIN")
-                .resizable()
+            Rectangle()
                 .background(Color.black)
+            Image("MAIN")
+//                .frame(width: 1000, height: 1000)
+//                .fixedSize()
+               
+            
+//                .frame(width: 10, height: 200)
+//                .scaledToFit()
+                .resizable()
+                
             VStack{
                 //                Text("\(SecondElapsed)")
                 NavigationLink{
