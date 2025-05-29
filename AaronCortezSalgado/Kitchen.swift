@@ -36,6 +36,11 @@ struct Kitchen: View {
     var body: some View {
 //        NavigationView{
             ZStack{
+                Rectangle()
+                .frame(width: 402, height: 800)
+                .background(Color.black)
+                Image("kit")
+                    .resizable()
                 VStack{
                     Text("\(Ch1ps)")
                         .foregroundStyle(Color.mint)

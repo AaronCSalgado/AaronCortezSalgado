@@ -35,14 +35,18 @@ struct StatView: View {
                 }
             }
             HStack{
-                
                 Button{
                     moveOn()
                 }label: {
                     Text("Tranfer")
                 }
+                .font(. system(size: 20))
+                .bold()
                 TextField("bet money here", text: $Numberinput)
+                    .font(. system(size: 20))
+                    .bold()
             }
+            Text("place money here to fill in your debt")
         }
     }
     func Debt_Broken(){
