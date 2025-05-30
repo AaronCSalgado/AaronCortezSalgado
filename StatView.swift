@@ -11,8 +11,12 @@ struct StatView: View {
     @State var show = false
     @State var Numberinput: String
     @State var Number = 0.0
+    @State var ty = ""
     var body: some View {
         VStack{
+            Text("WHAT ARE DOING, GET TO WORK.")
+            Text(" DON'T JUST STAND THERE,")
+            Text(" GET TO WORK.")
             if show == true{
                 Text("Freedom")
                     .font(.system(size: 30))
@@ -33,10 +37,24 @@ struct StatView: View {
                         .padding()
                         .padding()
                 }
+//                Text("\(ty)")
             }
             HStack{
                 Button{
-                    moveOn()
+                    if Ch1ps == 0 {
+                        ty = "You have no money to tranfer"
+                    }
+                    if Ch1ps < Double(Numberinput)! {
+                        ty = "You don't have enough money"
+                    }
+                        if Ch1ps > Double(Numberinput)! {
+                            
+                            
+                            Number = Double(Numberinput)!
+                            Ch1ps -= Number
+                            debt -= Number
+                        }
+                    
                 }label: {
                     Text("Tranfer")
                 }
@@ -46,7 +64,9 @@ struct StatView: View {
                     .font(. system(size: 20))
                     .bold()
             }
-            Text("place money here to fill in your debt")
+            Text("place money here to fill in your debt...\(ty)")
+                .font(.system(size: 25))
+                .bold()
         }
     }
     func Debt_Broken(){
@@ -54,11 +74,11 @@ struct StatView: View {
             show = true
         }
     }
-    func moveOn(){
-        Number = Double(Numberinput)!
-        Ch1ps -= Number
-        debt -= Number
-    }
+//    func moveOn(){
+//        Number = Double(Numberinput)!
+//        Ch1ps -= Number
+//        debt -= Number
+//    }
 }
 
 #Preview {

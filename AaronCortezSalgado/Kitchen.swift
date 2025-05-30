@@ -139,8 +139,9 @@ struct Kitchen: View {
     }
     func cook() {
   let goh = Int.random(in: 1...100)
-        if goh <= 80 {
-            paid *= 15
+        if goh <= 90 {
+            paid *= 13
+            print(goh)
         }
     }
     func severed(){

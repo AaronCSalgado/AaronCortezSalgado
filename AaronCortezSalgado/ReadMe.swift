@@ -44,4 +44,6 @@
  few changes
  5/22/25
  after a while of adding and fix, new info buttons, better money gain, better rules
+ 5/30/25
+ game info, patch negative number, debt gain fixed, more art, done 
  */

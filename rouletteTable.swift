@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 struct rouletteTable: View {
-    @State var name = "Jiko"
+    @State var name = ""
     @State var NameMessage = ""
     @State var showAlert = false
     @State var show = false
@@ -65,15 +65,6 @@ struct rouletteTable: View {
                 .foregroundStyle(Color.myyul)
                 .font(.system(size: 30))
                 .bold()
-//            Text("\(compblack)")
-//            Text("\(compRed)")
-//            Text("\(oddsNevens)")
-//            Text("\(bet2)")
-//            Text("\(bet3)")
-//            Text("\(bet4)")
-//            Text("\(bet5)")
-//            Text("\(bet6)")
-//            Text("\(people)")
             if Number >= 1500 {
                 Button{
                     Number = Double(Numberinput)!
@@ -95,6 +86,9 @@ struct rouletteTable: View {
                         .frame(width: 100, height: 40)
                         .foregroundStyle(Color.mycol)
                     Button{
+                        if Ch1ps == 0 {
+                            ty = "You have no money to bet"
+                        }
                         people = Int.random(in: 1...5)
                          if people == 1 {
                             bet2 = Double.random(in: 410...5000)
@@ -117,9 +111,11 @@ struct rouletteTable: View {
                             bet5 = Double.random(in: 580...6700)
                             bet6 = Double.random(in: 620...7500)
                         }
-                        playerBet()
-                        Number = Double(Numberinput)!
-                        Ch1ps -= Number
+                        if Ch1ps == 1500 {
+                            playerBet()
+                            Number = Double(Numberinput)!
+                            Ch1ps -= Number
+                        }
                         print("\(compblack)")
                         print("\(compRed)")
                         print("\(oddsNevens)")
@@ -239,10 +235,10 @@ struct rouletteTable: View {
             }
             .padding()
             VStack{
-                Text(" please place a bet 1500 or Above at the 0")
-                    .foregroundStyle(Color.myyul)
-                    .bold()
-                    .font(. system(size: 20))     
+//                Text(" please place a bet 1500 or Above at the 0")
+//                    .foregroundStyle(Color.myyul)
+//                    .bold()
+//                    .font(. system(size: 20))     
             }
             Text(" money")
                 .foregroundStyle(Color.mint)
@@ -316,15 +312,16 @@ struct rouletteTable: View {
                     print("winner")
                     ty = "winner"
                 }else {
-//                    debt += bet2*0.50
-//                    debt += bet3*0.50
-//                    debt += bet4*0.50
-//                    debt += bet5*0.50
-//                    debt += bet6*0.50
-//                    print("DEBT")
-//                    ty = "another loss"
+                    debt1 += bet2*0.50
+                    debt1 += bet3*0.50
+                    debt1 += bet4*0.50
+                    debt1 += bet5*0.50
+                    debt1 += bet6*0.50
+                    print("DEBT")
+                    ty = "another loss"
                 }
 //            }
+                debt += debt1
                 Ch1ps += bet
         }
         compblack = black.randomElement()!
@@ -348,14 +345,14 @@ struct rouletteTable: View {
                     print("winner")
                     ty = "winner"
                 }else {
-                        debt += bet2*0.50
-                        debt += bet3*0.50
-                        debt += bet4*0.50
-                        debt += bet5*0.50
-                        debt += bet6*0.50
-                        print("DEBT")
-                        ty = "another loss"
-                                    }
+                    debt1 += bet2*0.50
+                    debt1 += bet3*0.50
+                    debt1 += bet4*0.50
+                    debt1 += bet5*0.50
+                    debt1 += bet6*0.50
+                    print("DEBT")
+                    ty = "another loss"
+                }
                 
                 for i in 0..<evens.count{
                     if oddsNevens == odds[i]{
@@ -367,11 +364,11 @@ struct rouletteTable: View {
                         print("winner")
                         ty = "winner"
                     }else {
-                        debt += bet2*0.50
-                        debt += bet3*0.50
-                        debt += bet4*0.50
-                        debt += bet5*0.50
-                        debt += bet6*0.50
+                        debt1 += bet2*0.50
+                        debt1 += bet3*0.50
+                        debt1 += bet4*0.50
+                        debt1 += bet5*0.50
+                        debt1 += bet6*0.50
                         print("DEBT")
                         ty = "another loss"
                     }
@@ -380,6 +377,7 @@ struct rouletteTable: View {
             }
                 //            }
             }
+        debt += debt1
         Ch1ps += bet
         }
 }

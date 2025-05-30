@@ -23,6 +23,7 @@ struct Slots: View {
     @State var randomizeslot1 = 0
     @State var randomizeslot2 = 0
     @State var randomizeslot3 = 0
+    @State var ty = ""
     var body: some View {
         ZStack{
             Rectangle()
@@ -38,7 +39,7 @@ struct Slots: View {
                         .resizable()
                         
                 }
-                .frame(width:200, height:200)
+                .frame(width:250, height:250)
                 ZStack{
                     
                     Rectangle()
@@ -85,13 +86,18 @@ struct Slots: View {
 //                    .padding(.top, 100)
                 HStack{
                     Button{
-                        bet = Number
-                        act = true
-                        Number = Double(Numberinput)!
-                        Maybe()
-                        randomizeslot1 = Int.random(in: 1...3)
-                        randomizeslot2 = Int.random(in: 1...3)
-                        randomizeslot3 = Int.random(in: 1...3)
+                        if Ch1ps == 0 {
+                            ty = "You have no money to bet"
+                        }
+                        if Ch1ps == 1500 {
+                            bet = Number
+                            act = true
+                            Number = Double(Numberinput)!
+                            Maybe()
+                            randomizeslot1 = Int.random(in: 1...3)
+                            randomizeslot2 = Int.random(in: 1...3)
+                            randomizeslot3 = Int.random(in: 1...3)
+                        }
                     }label: {
                         Text("Lever")
                     }
@@ -110,6 +116,10 @@ struct Slots: View {
                             .bold()
                     }
                 }
+                Text("\(ty)")
+                    .foregroundStyle(Color.myyul)
+                    .font(.system(size: 30))
+                    .bold()
                 Button{
                     showAlert.toggle()
                 }label: {
