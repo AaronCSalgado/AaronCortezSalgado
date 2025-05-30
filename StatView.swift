@@ -54,7 +54,6 @@ struct StatView: View {
                             Ch1ps -= Number
                             debt -= Number
                         }
-                    
                 }label: {
                     Text("Tranfer")
                 }

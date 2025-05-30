@@ -11,9 +11,14 @@ struct SecondFloor: View {
     var body: some View {
 //        NavigationView{
             ZStack{
+                Rectangle()
+                .frame(width: 402, height: 800)
+                .background(Color.black)
                 Image("SECON")
                     .resizable()
-                    .background(Color.black)
+                    .frame(width:410, height:500)
+                    
+                
                 VStack{
                     HStack{
                         NavigationLink{
@@ -30,8 +35,9 @@ struct SecondFloor: View {
                         }
                     }
                 }
-//            }
         }
+            
+        
     }
 }
 

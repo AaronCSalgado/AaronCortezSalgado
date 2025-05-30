@@ -27,6 +27,7 @@ struct MainFloor: View {
 //                .frame(width: 10, height: 200)
 //                .scaledToFit()
                 .resizable()
+                .frame(width:410, height:500)
                 
             VStack{
                 //                Text("\(SecondElapsed)")

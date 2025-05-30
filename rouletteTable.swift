@@ -111,11 +111,11 @@ struct rouletteTable: View {
                             bet5 = Double.random(in: 580...6700)
                             bet6 = Double.random(in: 620...7500)
                         }
-                        if Ch1ps == 1500 {
+                        
                             playerBet()
                             Number = Double(Numberinput)!
                             Ch1ps -= Number
-                        }
+                        
                         print("\(compblack)")
                         print("\(compRed)")
                         print("\(oddsNevens)")

@@ -89,7 +89,7 @@ struct Slots: View {
                         if Ch1ps == 0 {
                             ty = "You have no money to bet"
                         }
-                        if Ch1ps == 1500 {
+                        
                             bet = Number
                             act = true
                             Number = Double(Numberinput)!
@@ -97,7 +97,7 @@ struct Slots: View {
                             randomizeslot1 = Int.random(in: 1...3)
                             randomizeslot2 = Int.random(in: 1...3)
                             randomizeslot3 = Int.random(in: 1...3)
-                        }
+                        
                     }label: {
                         Text("Lever")
                     }
